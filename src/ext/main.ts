@@ -7,6 +7,8 @@ type Instance = {
 
 let instance: Instance | null = null;
 
+const title = "Space Garden";
+
 const focusInstance = async () => {
   if (instance) {
     await ext.windows.restore(instance.windowId);
@@ -39,33 +41,29 @@ ext.runtime.onExtensionClick.addListener(async () => {
     // const isDarkMode = await ext.windows.getPlatformDarkMode();
 
     tab = await ext.tabs.create({
-      text: `Space Garden`,
+      text: title,
       icon: "./assets/128.png",
       mutable: true,
-      // icon_dark: "./assets/128-dark.png",
     });
-
-    const { os } = await ext.runtime.getPlatformInfo();
 
     window = await ext.windows.create({
       center: true,
-      // darkMode: isDarkMode,
-      fullscreenable: false,
-      title: `Space Garden`,
-      // icon: isDarkMode ? "./assets/128.png" : "./assets/128-dark.png",
+      fullscreenable: true,
+      title,
       icon: "./assets/128.png",
       vibrancy: false,
-      frame: os !== "mac",
-      titleBarStyle: os === "mac" ? "inset" : undefined,
+      frame: false,
+      titleBarStyle: "inset",
       width: 960,
       height: 600,
+      minHeight: 200,
       aspectRatio: 960 / 600,
     });
 
     const contentSize = await ext.windows.getContentSize(window.id);
 
     websession = await ext.websessions.create({
-      partition: `Space Garden`,
+      partition: title,
       global: false,
     });
     webview = await ext.webviews.create({

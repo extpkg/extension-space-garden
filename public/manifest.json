@@ -3,7 +3,7 @@
   "name": "Space Garden",
   "short_name": "Space Garden",
   "description": "",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": "EXT, Inc.",
   "icons": {
     "128": "./assets/128.png",
