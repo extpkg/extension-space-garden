@@ -1,7 +1,7 @@
 {
   "name": "extension-space-garden",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "Navigate pixelated space landscapes in this dynamic interactive garden journey.",
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production node ./scripts/build.mjs",
