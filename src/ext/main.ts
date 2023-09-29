@@ -53,6 +53,7 @@ ext.runtime.onExtensionClick.addListener(async () => {
       fullscreenable: false,
       title: `Space Garden`,
       // icon: isDarkMode ? "./assets/128.png" : "./assets/128-dark.png",
+      icon: "./assets/128.png",
       vibrancy: false,
       frame: os !== "mac",
       titleBarStyle: os === "mac" ? "inset" : undefined,
