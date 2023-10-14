@@ -13,3 +13,7 @@ Navigate pixelated space landscapes in this dynamic interactive garden journey.
 
 Run `npm run dev` to watch `src` and `public` directories and rebuild the
 project on changes
+
+## Notes
+
+Space Garden has performance issues on fairly large planets.
