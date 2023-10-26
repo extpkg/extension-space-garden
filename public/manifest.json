@@ -3,7 +3,7 @@
   "name": "Space Garden",
   "short_name": "Space Garden",
   "description": "Navigate pixelated space landscapes in this dynamic interactive garden journey.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "EXT, Inc.",
   "icons": {
     "128": "./assets/128.png",

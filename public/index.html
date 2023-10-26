@@ -4617,6 +4617,13 @@
           if (Key.justReleased(Key.r)) {
             resetGame();
           }
+          if (Key.justReleased(Key.f)) {
+            ext.webviews.getCurrent().then(async ({ id: webviewId }) => {
+              const window = await ext.webviews.getAttachedWindow(webviewId);
+              const isFullscreen = await ext.windows.isFullscreen(window.id);
+              await ext.windows.setFullscreen(window.id, !isFullscreen);
+            });
+          }
         }
 
         function drawGame() {
@@ -4649,7 +4656,7 @@
           }
 
           r.text([
-            "M MAP/STATS  H TOGGLE HELP",
+            "F TOGGLE FULLSCREEN M MAP/STATS  H TOGGLE HELP",
             w - 8,
             h - 8,
             1,
