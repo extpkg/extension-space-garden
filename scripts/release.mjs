@@ -16,7 +16,7 @@ export const build = async () => {
   const isTypeCheckOk = typeCheck();
   if (!isTypeCheckOk) process.exit(1);
 
-  await esbuild.build(appBuildOptions);
+  // await esbuild.build(appBuildOptions);
   await esbuild.build(extBuildOptions);
 
   copyAssets();
